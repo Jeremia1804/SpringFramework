@@ -1,9 +1,12 @@
 package etu001804.framework.servlet;
 import java.io.*;
+import java.util.HashMap;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import fonction.*;
+import etu1804.framework.*;
 public class FrontServlet extends HttpServlet {
+    HashMap<String,Mapping> MappingUrls;
 
     public String process(String url,String path){
         String valiny = Utilitaire.getParameter(url, path);
