@@ -2,6 +2,8 @@ package fonction;
 
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
+import us.TestAnnoter;
+
 import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.util.HashMap;
@@ -212,6 +214,9 @@ public class Utilitaire {
             return null;
         }
         Object o = method.invoke(objet, valeursDesParametres);
+        if(TestAnnoter.verifierJSON(method, RestAPI.class)){
+            return Utilitaire.toJson(o);
+        }
         return o;
     }
 

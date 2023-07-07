@@ -1,5 +1,9 @@
 package koursa;
 import annote.Url;
+import annote.RestAPI;
+
+import java.util.HashMap;
+
 import annote.Upload;
 import etu1804.FileUpload;
 import etu1804.ModelView;
@@ -26,12 +30,14 @@ public class Course {
     } 
 
     @Url("show")
-    public void findById(){
+    @RestAPI("bonjour")
+    public HashMap<String,Object> findById(){
         ModelView model = new ModelView("view.jsp");
         model.addItem("nom",5);
         model.addItem("prenom","Jeremia");
         model.addItem("filsAine","Mahenina");
         // return model;
+        return model.getData();
     }
 
     @Url("coucou")

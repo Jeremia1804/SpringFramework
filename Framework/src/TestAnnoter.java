@@ -14,6 +14,13 @@ import annote.*;
 public class TestAnnoter{
     public TestAnnoter(){}
 
+    public static boolean verifierJSON(Method m,Class ano)throws Exception{
+       if(m.isAnnotationPresent(ano)){
+        return true;
+       } 
+       return false;
+    }
+
     public static void run(Class cl , Class a, HashMap<String,Mapping> hash,Class b, HashMap<Class,Object> singletons) throws Exception{
         Method[] methods = cl.getMethods();
         String j = "";
