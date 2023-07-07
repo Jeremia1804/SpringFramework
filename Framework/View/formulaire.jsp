@@ -12,7 +12,7 @@
         <input type="text" name="prenom" id="">
         <input type="number" name="num" id="">
         <input type="file" name ="monfichier">
-        <input type="submit" value="valider">
+        <input type="submit" value="valider">         
     </form>
     
 </body>  
