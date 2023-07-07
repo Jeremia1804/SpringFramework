@@ -19,6 +19,7 @@ public class Voiture {
     @Url("jeteste")
     public ModelView findAll(){
         ModelView model = new ModelView("afficher.jsp");
+        model.setIsJson(true);
         model.addItem("nom",this.nom);
         model.addItem("num",this.num);
         return model;
