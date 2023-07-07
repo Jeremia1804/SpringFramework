@@ -4,14 +4,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
 http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
 version="2.4">
-<display-name>Application WEB</display-name>
+<display-name>Application Merci</display-name>
 
 <servlet>
     <servlet-name>front</servlet-name>
     <servlet-class>etu1804.framework.servlet.FrontServlet</servlet-class>
     <init-param>
         <param-name>path</param-name>
-        <param-value>C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\FrameworkTest\WEB-INF\classes</param-value>
+        <param-value>C:\Program Files\Apache Software Foundation\Tomcat 10.0\webapps\Framework\WEB-INF\classes</param-value>
     </init-param>
 </servlet>
 

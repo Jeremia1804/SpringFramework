@@ -1,0 +1,2 @@
+Manifest-Version: 1.0
+Main-Class: etu1804/framework/servlet/FrontServlet  
