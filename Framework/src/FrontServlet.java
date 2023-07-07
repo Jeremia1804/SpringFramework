@@ -62,6 +62,10 @@ public class FrontServlet extends HttpServlet {
             Object result = Utilitaire.AnalyserLaFonction(o, a.getMethod(), parm,out);
             if(result!=null && result.getClass() == ModelView.class){
                 ModelView ur = (ModelView) result;
+                if(ur.getIsJson() == true){
+                    String json = Utilitaire.toJson(ur.getData());
+                    req.setAttribute("json",json);
+                }
                 if(nombre > 0){
                     req.setAttribute(cl.getSimpleName(),o);
                 }
